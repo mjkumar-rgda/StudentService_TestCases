@@ -38,7 +38,7 @@ public class StudentControllerTest {
 			Arrays.asList("Learn Maven", "Import Project", "First Example",
 					"Second Example"));
 
-	String exampleCourseJson = "{\"name\":\"Spring\",\"description\":\"10 Steps\",\"steps\":[\"Learn Maven\",\"Import Project\",\"First Example\",\"Second Example\"]}";
+	String exampleCourseJson = "{\"name\":\"Spring1\",\"description\":\"10 Steps\",\"steps\":[\"Learn Maven\",\"Import Project\",\"First Example\",\"Second Example\"]}";
 
 	@Test
 	public void retrieveDetailsForCourse() throws Exception {
