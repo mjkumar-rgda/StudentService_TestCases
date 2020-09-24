@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -28,6 +30,8 @@ import com.in28minutes.springboot.service.StudentService;
 @WebMvcTest(value = StudentController.class, secure = false)
 public class StudentControllerTest {
 
+	
+	private static final Logger LOGGER = LogManager.getLogger(StudentControllerTest.class);
 	@Autowired
 	private MockMvc mockMvc;
 
@@ -58,6 +62,7 @@ public class StudentControllerTest {
 
 		// {"id":"Course1","name":"Spring","description":"10 Steps, 25 Examples and 10K Students","steps":["Learn Maven","Import Project","First Example","Second Example"]}
 
+		LOGGER.info("Expected    : "+ expected);
 		assertEquals(expected, result.getResponse().getContentAsString());
 	}
 

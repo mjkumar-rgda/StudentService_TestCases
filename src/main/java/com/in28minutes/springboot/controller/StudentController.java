@@ -3,6 +3,8 @@ package com.in28minutes.springboot.controller;
 import java.net.URI;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,7 @@ import com.in28minutes.springboot.service.StudentService;
 @RestController
 public class StudentController {
 
+	private static final Logger LOGGER = LogManager.getLogger(StudentController.class);
 	@Autowired
 	private StudentService studentService;
 
@@ -29,6 +32,8 @@ public class StudentController {
 	@GetMapping("/students/{studentId}/courses/{courseId}")
 	public Course retrieveDetailsForCourse(@PathVariable String studentId,
 			@PathVariable String courseId) {
+		
+		LOGGER.info("courseId   : " + courseId);
 		return studentService.retrieveCourse(studentId, courseId);
 	}
 	
