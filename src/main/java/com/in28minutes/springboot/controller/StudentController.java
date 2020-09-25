@@ -33,7 +33,7 @@ public class StudentController {
 	public Course retrieveDetailsForCourse(@PathVariable String studentId,
 			@PathVariable String courseId) {
 		
-		LOGGER.info("courseId   : " + courseId);
+		LOGGER.info("courseId  :: " + courseId);
 		return studentService.retrieveCourse(studentId, courseId);
 	}
 	
