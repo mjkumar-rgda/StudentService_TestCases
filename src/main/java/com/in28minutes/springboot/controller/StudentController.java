@@ -31,7 +31,7 @@ public class StudentController {
 	
 	@RequestMapping("/")
 	public void test() {
-		
+		LOGGER.info(" LOGGER    " + driver);
 		System.out.println(driver);
 		
 	}
