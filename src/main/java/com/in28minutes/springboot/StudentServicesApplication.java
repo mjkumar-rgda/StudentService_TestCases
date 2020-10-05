@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource(value = {"file:f:/Manoj/Workspace/Junit/Website-springbootrestservices-simplerestserviceswithunitandintegrationtests/application.properties"})
+@PropertySource(value = {"file:StudentService_TestCases/application.properties"})
 public class StudentServicesApplication {
 
 	public static void main(String[] args) {
